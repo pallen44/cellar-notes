@@ -31,7 +31,7 @@ This file mirrors the v1 product backlog as issue-ready work items. Actual GitHu
 
 ### Issue 8: STORY-001: App Foundation
 
-**GitHub:** https://github.com/pallen44/cellar-notes/issues/21
+**GitHub:** https://github.com/pallen44/cellar-notes/issues/8
 **Labels:** `v1`, `priority:P0`, `sprint:1`, `type:story`, `area:foundation`, `status:done`
 **Story Points:** 5
 **Status:** Done
@@ -69,7 +69,7 @@ None.
 
 ### Issue 9: STORY-002: Supabase Data Model
 
-**GitHub:** https://github.com/pallen44/cellar-notes/issues/22
+**GitHub:** https://github.com/pallen44/cellar-notes/issues/9
 **Labels:** `v1`, `priority:P0`, `sprint:1`, `type:story`, `area:data`, `status:in-progress`
 **Story Points:** 5
 **Status:** In Progress
