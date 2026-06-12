@@ -29,6 +29,12 @@ npm run lint
 
 Build a finished v1 in one month.
 
+## Project Docs
+
+- [v1 spec](docs/spec.md)
+- [Future ideas](docs/future.md)
+- [UI/UX inspiration](docs/ui-ux-inspiration.md)
+
 ## Next Iteration TODOs
 
 - Build the real add wine form with working state and validation.
@@ -48,4 +54,4 @@ Planned after the initial mock app:
 
 ## Development Rule
 
-Keep v1 small. Anything not listed in SPEC.md goes into future.md.
+Keep v1 small. Anything not listed in the v1 spec goes into future ideas.
