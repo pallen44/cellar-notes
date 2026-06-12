@@ -29,7 +29,7 @@ This file mirrors the v1 product backlog as issue-ready work items. Actual GitHu
 
 ## Issues
 
-### Issue 21: STORY-001: App Foundation
+### Issue 8: STORY-001: App Foundation
 
 **GitHub:** https://github.com/pallen44/cellar-notes/issues/21
 **Labels:** `v1`, `priority:P0`, `sprint:1`, `type:story`, `area:foundation`, `status:done`
@@ -67,7 +67,7 @@ None.
 
 ---
 
-### Issue 22: STORY-002: Supabase Data Model
+### Issue 9: STORY-002: Supabase Data Model
 
 **GitHub:** https://github.com/pallen44/cellar-notes/issues/22
 **Labels:** `v1`, `priority:P0`, `sprint:1`, `type:story`, `area:data`, `status:in-progress`
@@ -101,7 +101,7 @@ So that my memories are available later.
 
 ---
 
-### Issue 3: STORY-003: Create Wine Entry
+### Issue 10: STORY-003: Create Wine Entry
 
 **Labels:** `v1`, `priority:P0`, `sprint:1`, `type:story`, `area:entry-form`
 **Story Points:** 8
@@ -138,7 +138,7 @@ So that I can remember the bottle and the story around it.
 
 ---
 
-### Issue 4: STORY-004: Upload Bottle or Label Photo
+### Issue 11: STORY-004: Upload Bottle or Label Photo
 
 **Labels:** `v1`, `priority:P0`, `sprint:2`, `type:story`, `area:photos`
 **Story Points:** 5
@@ -175,7 +175,7 @@ So that each wine memory is visually recognizable.
 
 ---
 
-### Issue 5: STORY-005: Browse Wine Cards
+### Issue 12: STORY-005: Browse Wine Cards
 
 **Labels:** `v1`, `priority:P0`, `sprint:2`, `type:story`, `area:browse`
 **Story Points:** 5
@@ -210,7 +210,7 @@ So that the app feels like a personal wine scrapbook instead of a spreadsheet.
 
 ---
 
-### Issue 6: STORY-006: Wine Detail Page
+### Issue 13: STORY-006: Wine Detail Page
 
 **Labels:** `v1`, `priority:P0`, `sprint:2`, `type:story`, `area:detail`
 **Story Points:** 5
@@ -245,7 +245,7 @@ So that I can relive the full memory around that bottle.
 
 ---
 
-### Issue 7: STORY-007: Edit Wine Entry
+### Issue 14: STORY-007: Edit Wine Entry
 
 **Labels:** `v1`, `priority:P0`, `sprint:2`, `type:story`, `area:editing`
 **Story Points:** 5
@@ -280,7 +280,7 @@ So that I can fix mistakes or add details later.
 
 ---
 
-### Issue 8: STORY-008: Delete Wine Entry
+### Issue 15: STORY-008: Delete Wine Entry
 
 **Labels:** `v1`, `priority:P0`, `sprint:2`, `type:story`, `area:editing`
 **Story Points:** 3
@@ -313,7 +313,7 @@ So that I can remove mistakes or unwanted records.
 
 ---
 
-### Issue 9: STORY-009: Search and Filter Wines
+### Issue 16: STORY-009: Search and Filter Wines
 
 **Labels:** `v1`, `priority:P0`, `sprint:2`, `type:story`, `area:search`
 **Story Points:** 5
@@ -346,7 +346,7 @@ So that I can quickly find a bottle I remember.
 
 ---
 
-### Issue 10: STORY-010: Mobile Visual Polish
+### Issue 17: STORY-010: Mobile Visual Polish
 
 **Labels:** `v1`, `priority:P1`, `sprint:3`, `type:story`, `area:foundation`
 **Story Points:** 5
@@ -385,7 +385,7 @@ So that logging wine feels enjoyable and memorable.
 
 ---
 
-### Issue 11: STORY-011: Deployment and Production Readiness
+### Issue 18: STORY-011: Deployment and Production Readiness
 
 **Labels:** `v1`, `priority:P0`, `sprint:3`, `type:story`, `area:deployment`
 **Story Points:** 5
@@ -420,7 +420,7 @@ So that I can use it from my phone anytime.
 
 ---
 
-### Issue 12: STORY-012: v1 Manual QA
+### Issue 19: STORY-012: v1 Manual QA
 
 **Labels:** `v1`, `priority:P1`, `sprint:3`, `type:story`, `area:qa`
 **Story Points:** 3
@@ -453,7 +453,7 @@ So that v1 is dependable enough for personal use.
 - STORY-011.
 ---
 
-### Issue 13: STORY-013: Automated Test Coverage
+### Issue 20: STORY-013: Automated Test Coverage
 
 **Labels:** `v1`, `priority:P0`, `sprint:3`, `type:story`, `area:qa`
 **Story Points:** 5
