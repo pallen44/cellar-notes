@@ -13,8 +13,7 @@ export default function NotFound() {
           This note is not in the cellar.
         </h1>
         <p className="mt-4 leading-7 text-ink/65">
-          The initial app only includes a few mock wines. Head back to the journal to open
-          one of the sample entries.
+          Head back to the journal to find a bottle that is already on the shelf.
         </p>
         <Link
           href="/wines"

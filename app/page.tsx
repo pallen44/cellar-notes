@@ -7,23 +7,23 @@ import { wines } from "@/lib/wines";
 const featureCards = [
   {
     icon: Camera,
-    title: "Preview label art",
-    copy: "Use warm mock labels while the real photo upload flow waits for persistence."
+    title: "Keep the label close",
+    copy: "Each bottle starts with a warm visual anchor, so the journal feels personal at a glance."
   },
   {
     icon: Star,
-    title: "Read ratings",
-    copy: "Shape the 1-100 scoring language against a small set of sample bottles."
+    title: "Score the moment",
+    copy: "A simple 1-100 rating keeps the wine easy to compare without turning it into a leaderboard."
   },
   {
     icon: BookOpen,
-    title: "Review the story",
-    copy: "See how people, meals, occasions, and notes will sit together on each wine."
+    title: "Remember the table",
+    copy: "People, meals, occasions, and notes sit beside the wine facts that made the bottle matter."
   },
   {
     icon: Search,
-    title: "Browse the shape",
-    copy: "Move through the sample cellar before real entries and filters are connected."
+    title: "Find it later",
+    copy: "The cellar is built for the fragments you remember: grape, region, dinner, place, or story."
   }
 ];
 
@@ -43,21 +43,21 @@ export default function Home() {
             Cellar Notes
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-ink/72">
-            A warm mockup for browsing bottles, ratings, tasting notes, and the stories
-            that turn a wine into a memory.
+            A warm private journal for bottles, ratings, tasting notes, and the stories
+            that turn wine into memory.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/wines"
               className="inline-flex items-center justify-center rounded-full bg-cellar px-6 py-3 font-semibold text-linen shadow-soft hover:bg-ink"
             >
-              Browse mock cellar
+              Browse cellar
             </Link>
           </div>
           <dl className="mt-10 grid max-w-xl grid-cols-3 gap-4">
             <div>
               <dt className="font-display text-4xl font-semibold text-cellar">{wineCount}</dt>
-              <dd className="mt-1 text-sm text-ink/60">sample bottles in the mock cellar</dd>
+              <dd className="mt-1 text-sm text-ink/60">bottles in the journal</dd>
             </div>
             <div>
               <dt className="font-display text-4xl font-semibold text-cellar">1-100</dt>
@@ -76,10 +76,10 @@ export default function Home() {
         ) : (
           <div className="rounded-lg border border-cellar/10 bg-white/62 p-8 text-center shadow-soft backdrop-blur">
             <h2 className="font-display text-3xl font-semibold text-cellar">
-              No sample bottles yet
+              No bottles yet
             </h2>
             <p className="mt-3 leading-7 text-ink/68">
-              Add mock wines in the data file to preview the cellar experience.
+              Your first saved bottle will begin the cellar.
             </p>
           </div>
         )}
@@ -106,7 +106,7 @@ export default function Home() {
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cork">
-              From the mock cellar
+              From the cellar
             </p>
             <h2 className="mt-3 font-display text-4xl font-semibold text-cellar">
               Recent bottles
@@ -124,7 +124,7 @@ export default function Home() {
           </div>
         ) : (
           <p className="mt-8 rounded-lg bg-white/68 p-6 leading-7 text-ink/68">
-            No sample wines are available yet.
+            No wines are available yet.
           </p>
         )}
       </section>

@@ -16,8 +16,7 @@ export default function WinesPage() {
               Wine journal
             </h1>
             <p className="mt-3 max-w-2xl leading-7 text-ink/68">
-              A small mock cellar to shape the browsing experience before real entries are
-              connected.
+              Browse the bottles you want to remember by label, score, place, and story.
             </p>
           </div>
         </div>
@@ -30,7 +29,7 @@ export default function WinesPage() {
           </div>
         ) : (
           <p className="mt-8 rounded-lg bg-white/68 p-6 leading-7 text-ink/68">
-            No sample wines are available yet.
+            No wines are available yet.
           </p>
         )}
       </section>
