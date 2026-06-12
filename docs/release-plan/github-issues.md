@@ -7,10 +7,12 @@ This file mirrors the v1 product backlog as issue-ready work items. Actual GitHu
 - `v1`
 - `priority:P0`
 - `priority:P1`
+- `priority:P2`
 - `sprint:1`
 - `sprint:2`
 - `sprint:3`
 - `type:story`
+- `type:chore`
 - `area:foundation`
 - `area:data`
 - `area:entry-form`
@@ -21,13 +23,20 @@ This file mirrors the v1 product backlog as issue-ready work items. Actual GitHu
 - `area:search`
 - `area:deployment`
 - `area:qa`
+- `status:backlog`
+- `status:in-progress`
+- `status:done`
 
 ## Issues
 
-### Issue 1: STORY-001: App Foundation
+### Issue 21: STORY-001: App Foundation
 
-**Labels:** `v1`, `priority:P0`, `sprint:1`, `type:story`, `area:foundation`
+**GitHub:** https://github.com/pallen44/cellar-notes/issues/21
+**Labels:** `v1`, `priority:P0`, `sprint:1`, `type:story`, `area:foundation`, `status:done`
 **Story Points:** 5
+**Status:** Done
+
+**PO Note:** Accepted on the basis of the v1 foundation acceptance criteria. A separate reusable page container component was not created; the current scoped page containers are sufficient for v1 foundation and should not block the story.
 
 As a user,
 I want a fast, mobile-friendly web app foundation,
@@ -35,22 +44,22 @@ So that I can use Cellar Notes reliably on my phone.
 
 #### Acceptance Criteria
 
-- [ ] Next.js app is created with TypeScript.
-- [ ] Tailwind CSS is configured.
-- [ ] Basic app shell exists with warm, premium visual direction.
-- [ ] Navigation supports wine list, add wine, and detail route.
-- [ ] App runs locally.
-- [ ] No non-MVP features are scaffolded.
+- [x] Next.js app is created with TypeScript.
+- [x] Tailwind CSS is configured.
+- [x] Basic app shell exists with warm, premium visual direction.
+- [x] Navigation supports wine list, add wine, and detail route.
+- [x] App runs locally.
+- [x] No non-MVP features are scaffolded.
 
 #### Tasks
 
-- [ ] Create Next.js project structure.
-- [ ] Configure Tailwind CSS.
-- [ ] Add base layout and metadata.
+- [x] Create Next.js project structure.
+- [x] Configure Tailwind CSS.
+- [x] Add base layout and metadata.
 - [ ] Add reusable page container component.
-- [ ] Add initial navigation.
-- [ ] Add empty placeholder pages for list and create flows.
-- [ ] Verify mobile viewport layout.
+- [x] Add initial navigation.
+- [x] Add empty placeholder pages for list and create flows.
+- [x] Verify mobile viewport layout.
 
 #### Blockers / Prerequisites
 
@@ -58,10 +67,12 @@ None.
 
 ---
 
-### Issue 2: STORY-002: Supabase Data Model
+### Issue 22: STORY-002: Supabase Data Model
 
-**Labels:** `v1`, `priority:P0`, `sprint:1`, `type:story`, `area:data`
+**GitHub:** https://github.com/pallen44/cellar-notes/issues/22
+**Labels:** `v1`, `priority:P0`, `sprint:1`, `type:story`, `area:data`, `status:in-progress`
 **Story Points:** 5
+**Status:** In Progress
 
 As a user,
 I want my wine entries to be saved,
@@ -485,3 +496,30 @@ So that v1 can be changed and shipped with confidence.
 - STORY-003 for form validation tests.
 - STORY-004 for photo upload tests.
 - STORY-005 through STORY-009 for component and end-to-end coverage.
+
+---
+
+### Issue 23: POLISH: Extract shared page container component
+
+**GitHub:** https://github.com/pallen44/cellar-notes/issues/23
+**Labels:** `v1`, `priority:P2`, `sprint:3`, `type:chore`, `area:foundation`, `status:backlog`
+**Status:** Backlog
+
+Extract a shared page container/layout component for repeated page spacing and width rules if it still reduces duplication after core v1 flows are implemented.
+
+#### Acceptance Criteria
+
+- [ ] Repeated page container classes are consolidated only where it makes the code simpler.
+- [ ] Existing mobile layout and warm visual direction are preserved.
+- [ ] No user-facing behavior changes.
+- [ ] No non-v1 features are added.
+
+#### Tasks
+
+- [ ] Reassess repeated page container patterns after STORY-003.
+- [ ] Extract a shared component only if it reduces meaningful duplication.
+- [ ] Verify mobile layout is unchanged.
+
+#### Blockers / Prerequisites
+
+- Defer until core Sprint 1 persistence and create flow work is complete.
