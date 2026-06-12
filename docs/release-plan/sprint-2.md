@@ -16,6 +16,7 @@ Week 2 of 3
 - STORY-007: Edit Wine Entry
 - STORY-008: Delete Wine Entry
 - STORY-009: Search and Filter Wines
+- STORY-013 partial: component, integration, and search/filter tests
 
 ## Milestone Alignment
 
@@ -64,6 +65,7 @@ P0
 - Show upload loading state.
 - Add no-image fallback.
 - Test upload with phone photo dimensions.
+- Add mocked success/failure tests for photo upload helper.
 
 #### Blockers / Prerequisites
 
@@ -300,6 +302,7 @@ P0
 - Add clear search button.
 - Add no-results message.
 - Test on mobile.
+- Add automated tests for search/filter matching and no-results behavior.
 
 #### Blockers / Prerequisites
 
@@ -335,6 +338,7 @@ Sprint 2 is complete when:
 
 - All committed stories meet acceptance criteria.
 - Manual tests cover create, upload, browse, detail, edit, delete, and search.
+- Automated component/integration tests cover forms, cards, details, data helpers, photo upload, and search/filter logic.
 - No known P0 workflow break remains.
 - Non-MVP ideas are not implemented.
 
@@ -348,3 +352,4 @@ Demonstrate:
 4. Edit a field.
 5. Search for the edited entry.
 6. Delete a test entry after confirmation.
+7. Run component and integration tests for Sprint 2 functionality.

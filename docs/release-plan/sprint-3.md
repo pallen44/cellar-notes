@@ -13,6 +13,7 @@ Week 3 of 3
 - STORY-010: Mobile Visual Polish
 - STORY-011: Deployment and Production Readiness
 - STORY-012: v1 Manual QA
+- STORY-013: Automated Test Coverage
 
 ## Milestone Alignment
 
@@ -87,6 +88,7 @@ P0
 - Storage works in production.
 - README includes setup and deployment instructions.
 - Production smoke test passes.
+- Static checks, linting, unit tests, component tests, integration tests, and the end-to-end smoke test pass before release.
 - App can log 10 real or realistic sample bottles.
 
 #### Suggested Implementation Order
@@ -106,10 +108,12 @@ P0
 - Document Vercel deployment.
 - Connect project to Vercel.
 - Configure production env vars.
+- Run the full automated release test suite.
 - Deploy.
 - Test production create flow.
 - Test production photo upload.
 - Test production browse/detail/edit/delete/search.
+- Run the full automated release test suite before deployment.
 
 #### Blockers / Prerequisites
 
@@ -172,11 +176,58 @@ P1
 
 - STORY-011 for production QA.
 
+
+### STORY-013: Automated Test Coverage
+
+As a user,
+I want the important Cellar Notes flows covered by automated tests,
+So that v1 can be changed and shipped with confidence.
+
+#### Priority
+
+P0
+
+#### Story Points
+
+5
+
+#### Acceptance Criteria
+
+- Static checks, linting, and build checks are available.
+- Unit tests cover validation and search/filter logic.
+- Component/front-end tests cover the form, card, and detail display behavior.
+- Integration tests cover mocked Supabase data/storage success and failure paths.
+- One end-to-end smoke test covers create, browse, detail, edit, search, and delete.
+- Release checklist documents exactly which test commands to run.
+
+#### Suggested Implementation Order
+
+1. Finish any missing unit/component/integration coverage from Sprints 1 and 2.
+2. Add end-to-end smoke test coverage.
+3. Add release checklist commands.
+4. Run the full suite before deployment.
+5. Fix release-blocking failures.
+
+#### Tasks
+
+- Confirm static check command exists.
+- Confirm lint command exists.
+- Confirm unit/component/integration test command exists.
+- Add end-to-end smoke test for the main user journey.
+- Add README or release checklist test commands.
+- Run all tests locally.
+- Run all feasible tests before production deployment.
+
+#### Blockers / Prerequisites
+
+- STORY-001 through STORY-009.
+
 ## Sprint Acceptance Criteria
 
 Sprint 3 is complete when:
 
 - App is deployed.
+- Full automated release test suite passes before deployment.
 - Production app supports all v1 flows.
 - Mobile experience is acceptable and polished.
 - README explains setup/deployment.
@@ -193,6 +244,7 @@ Sprint 3 is complete when:
 
 ## Blockers to Watch
 
+- Failing automated tests close to release.
 - Vercel build errors.
 - Supabase Storage public/private access mismatch.
 - Mobile browser upload behavior.
@@ -201,7 +253,7 @@ Sprint 3 is complete when:
 ## Definition of Done
 
 - v1 is deployed and usable on mobile.
-- All P0 stories are complete.
+- All P0 stories are complete, including automated testing coverage.
 - P1 polish/QA is complete or explicitly reduced.
 - README is updated.
 - No non-MVP features are included.
@@ -218,7 +270,8 @@ Demonstrate from production URL:
 5. Edit the entry.
 6. Search for the entry.
 7. Delete a test entry.
-8. Show README setup/deployment documentation.
+8. Run or show passing automated tests.
+9. Show README setup/deployment documentation.
 
 # Recommended 3-Week Evening Schedule
 
@@ -311,6 +364,7 @@ Assumption: one developer works approximately 1.5-2.5 hours per weekday evening 
 ### Day 11
 
 - Mobile UI audit.
+- Fill gaps in unit/component/integration tests.
 - Improve spacing, typography, cards, and forms.
 
 ### Day 12
@@ -327,6 +381,7 @@ Assumption: one developer works approximately 1.5-2.5 hours per weekday evening 
 
 ### Day 14
 
+- Run the full automated release test suite.
 - Deploy.
 - Test production flows.
 - Fix deployment and storage issues.
@@ -340,6 +395,7 @@ Assumption: one developer works approximately 1.5-2.5 hours per weekday evening 
 ### Final Weekend Session
 
 - Fix critical QA findings.
+- Final automated test suite run.
 - Final smoke test on phone.
 - Confirm MVP-only scope.
 - Tag or mark v1 release candidate.

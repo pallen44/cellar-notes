@@ -13,6 +13,7 @@ Week 1 of 3
 - STORY-001: App Foundation
 - STORY-002: Supabase Data Model
 - STORY-003: Create Wine Entry
+- Testing foundation for STORY-013: static checks, linting, and unit test setup
 
 ## Milestone Alignment
 
@@ -152,6 +153,7 @@ P0
 - Add error message.
 - Redirect after success.
 - Test with at least 3 realistic entries.
+- Add unit tests for rating validation and required-field validation.
 
 #### Blockers / Prerequisites
 
@@ -187,6 +189,7 @@ Sprint 1 is complete when:
 - Code is committed.
 - Story acceptance criteria are met.
 - Main flow is manually tested.
+- Static checks, linting, and unit tests pass.
 - No known P0 defect remains in create flow.
 - Any deferred work is noted for Sprint 2 or `future.md`.
 
@@ -198,4 +201,5 @@ Demonstrate:
 2. Navigate to add wine.
 3. Create a wine entry with realistic data.
 4. Confirm entry persists.
-5. Show that non-MVP features are not present.
+5. Run static checks, linting, and unit tests.
+6. Show that non-MVP features are not present.

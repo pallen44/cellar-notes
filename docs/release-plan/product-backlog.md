@@ -619,6 +619,65 @@ P1
 
 - STORY-011.
 
+## STORY-013: Automated Test Coverage
+
+As a user,
+I want the important Cellar Notes flows covered by automated tests,
+So that v1 can be changed and shipped with confidence.
+
+### Priority
+
+P0
+
+### Story Points
+
+5
+
+### Acceptance Criteria
+
+- Project has a documented testing strategy.
+- Static checks, linting, and production build checks are available.
+- Unit tests cover rating validation, required-field validation, and search/filter logic.
+- Component/front-end tests cover the wine form, wine card, and detail rendering behavior.
+- Integration tests cover create/update/delete helper success and failure handling.
+- Photo upload helper success and failure paths are covered with mocks or test doubles.
+- At least one end-to-end smoke test covers create, browse, detail, edit, search, and delete.
+- CI or a documented local release checklist runs the v1 test suite before deployment.
+
+### Suggested Implementation Order
+
+1. Choose and install test tooling.
+2. Add static check, lint, test, and build scripts.
+3. Add unit tests for validation and search.
+4. Add component tests for form/card/detail behavior.
+5. Add integration tests around mocked Supabase helpers.
+6. Add one end-to-end smoke test for the core journey.
+7. Document the commands in the README or release checklist.
+
+### Tasks
+
+- Add or configure TypeScript static check command.
+- Add or configure lint command.
+- Add unit test runner.
+- Add component testing setup.
+- Add Playwright or equivalent end-to-end smoke test setup.
+- Mock Supabase database and storage calls for repeatable automated tests.
+- Add validation tests for rating boundaries.
+- Add search/filter tests.
+- Add wine form tests.
+- Add wine card/detail display tests.
+- Add data helper success/error tests.
+- Add photo upload success/failure tests.
+- Add release checklist command list.
+
+### Blockers / Prerequisites
+
+- STORY-001.
+- STORY-002.
+- STORY-003 for form validation tests.
+- STORY-004 for photo upload tests.
+- STORY-005 through STORY-009 for component and end-to-end coverage.
+
 ## MVP Cut Line
 
 If schedule pressure occurs, preserve these at all costs:
@@ -633,6 +692,7 @@ If schedule pressure occurs, preserve these at all costs:
 8. STORY-008: Delete Wine Entry
 9. STORY-009: Search and Filter Wines
 10. STORY-011: Deployment and Production Readiness
+11. STORY-013: Automated Test Coverage
 
 Can be reduced if necessary:
 

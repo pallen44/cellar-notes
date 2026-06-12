@@ -144,6 +144,13 @@ Ship a finished, deployable v1 that can be used on a phone to log 10 real bottle
 - Last-minute feature creep
 - Insufficient manual testing with realistic entries
 
+
+## v1 Testing Strategy
+
+Testing is explicitly included in v1. The plan uses a pragmatic testing pyramid: static checks and builds at the base, unit tests for validation/search/helpers, focused component tests for forms/cards/detail display, targeted integration tests for Supabase data/storage behavior, and a small end-to-end smoke suite for the critical user journey. The detailed testing strategy lives in `docs/release-plan/testing-strategy.md`.
+
+Minimum v1 coverage should include rating validation, required-field validation, search/filter logic, card rendering, detail display with missing optional fields, data helper success/error handling, photo upload success/failure handling, and one end-to-end smoke path for create, browse, detail, edit, search, and delete. Manual QA remains required with at least 10 realistic entries on a phone or mobile browser.
+
 ## Recommended Release Strategy
 
 Use three one-week sprints:
