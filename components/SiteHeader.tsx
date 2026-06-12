@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Wine } from "lucide-react";
+import { Plus, Wine } from "lucide-react";
 
 export function SiteHeader() {
   return (
@@ -15,6 +15,13 @@ export function SiteHeader() {
       <nav className="flex items-center gap-2 text-sm font-medium text-ink/70">
         <Link className="rounded-full px-3 py-2 hover:bg-white/70 hover:text-cellar" href="/wines">
           Wines
+        </Link>
+        <Link
+          className="inline-flex min-h-10 items-center justify-center gap-1 rounded-full bg-cellar px-3 py-2 font-semibold text-linen shadow-soft hover:bg-ink"
+          href="/wines/new"
+        >
+          <Plus className="h-4 w-4" aria-hidden="true" />
+          Add wine
         </Link>
       </nav>
     </header>
