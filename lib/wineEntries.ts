@@ -111,6 +111,46 @@ function validateWineEntryUpdate(entry: WineEntryUpdate): void {
   validateOptionalText(entry.photo_path, "Photo path");
 }
 
+function toWineEntryInsert(entry: NewWineEntry): NewWineEntry {
+  return {
+    winery: entry.winery,
+    wine_name: entry.wine_name,
+    vintage: entry.vintage,
+    grape: entry.grape,
+    region: entry.region,
+    country: entry.country,
+    price: entry.price,
+    location: entry.location,
+    people: entry.people,
+    food_pairing: entry.food_pairing,
+    occasion: entry.occasion,
+    notes: entry.notes,
+    rating: entry.rating,
+    photo_path: entry.photo_path
+  };
+}
+
+function toWineEntryUpdate(entry: WineEntryUpdate): WineEntryUpdate {
+  const payload: WineEntryUpdate = {};
+
+  if (entry.winery !== undefined) payload.winery = entry.winery;
+  if (entry.wine_name !== undefined) payload.wine_name = entry.wine_name;
+  if (entry.vintage !== undefined) payload.vintage = entry.vintage;
+  if (entry.grape !== undefined) payload.grape = entry.grape;
+  if (entry.region !== undefined) payload.region = entry.region;
+  if (entry.country !== undefined) payload.country = entry.country;
+  if (entry.price !== undefined) payload.price = entry.price;
+  if (entry.location !== undefined) payload.location = entry.location;
+  if (entry.people !== undefined) payload.people = entry.people;
+  if (entry.food_pairing !== undefined) payload.food_pairing = entry.food_pairing;
+  if (entry.occasion !== undefined) payload.occasion = entry.occasion;
+  if (entry.notes !== undefined) payload.notes = entry.notes;
+  if (entry.rating !== undefined) payload.rating = entry.rating;
+  if (entry.photo_path !== undefined) payload.photo_path = entry.photo_path;
+
+  return payload;
+}
+
 export async function listWineEntries(
   supabase: CellarSupabaseClient = createServerSupabaseClient()
 ): Promise<WineEntry[]> {
@@ -150,10 +190,11 @@ export async function createWineEntry(
   supabase: CellarSupabaseClient = createServerSupabaseClient()
 ): Promise<WineEntry> {
   validateWineEntryFields(entry);
+  const payload = toWineEntryInsert(entry);
 
   const { data, error } = await supabase
     .from(WINE_ENTRIES_TABLE)
-    .insert(entry)
+    .insert(payload)
     .select("*")
     .single();
 
@@ -171,10 +212,11 @@ export async function updateWineEntry(
 ): Promise<WineEntry> {
   validateWineEntryId(id);
   validateWineEntryUpdate(entry);
+  const payload = toWineEntryUpdate(entry);
 
   const { data, error } = await supabase
     .from(WINE_ENTRIES_TABLE)
-    .update(entry)
+    .update(payload)
     .eq("id", id)
     .select("*")
     .single();

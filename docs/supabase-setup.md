@@ -22,7 +22,6 @@ Use the anon key only. Do not add a service role key to the browser app.
 Run the committed SQL in [supabase/schema.sql](../supabase/schema.sql) in the
 Supabase SQL editor.
 
-For the unauthenticated personal v1, keep access intentionally simple while
-developing. If Row Level Security is enabled before auth exists, the app will
-need temporary policies for the anon key to read and write `wine_entries`.
-Tighten that when auth is deliberately added in a later story.
+The setup SQL enables Row Level Security on `public.wine_entries`. Until
+policies are added in a later story, Supabase API keys should not be able to
+read or write rows through the public API.

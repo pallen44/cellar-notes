@@ -18,6 +18,8 @@ create table if not exists public.wine_entries (
   updated_at timestamptz not null default now()
 );
 
+alter table public.wine_entries enable row level security;
+
 create or replace function public.set_updated_at()
 returns trigger
 language plpgsql
