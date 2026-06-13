@@ -8,9 +8,9 @@ export type Database = {
           wine_name: string;
           vintage: number | null;
           grape: string | null;
-          region: string | null;
+          region: string;
           country: string | null;
-          price: number | null;
+          price: number;
           location: string | null;
           people: string | null;
           food_pairing: string | null;
@@ -27,9 +27,9 @@ export type Database = {
           wine_name: string;
           vintage?: number | null;
           grape?: string | null;
-          region?: string | null;
+          region: string;
           country?: string | null;
-          price?: number | null;
+          price: number;
           location?: string | null;
           people?: string | null;
           food_pairing?: string | null;
@@ -46,9 +46,9 @@ export type Database = {
           wine_name?: string;
           vintage?: number | null;
           grape?: string | null;
-          region?: string | null;
+          region?: string;
           country?: string | null;
-          price?: number | null;
+          price?: number;
           location?: string | null;
           people?: string | null;
           food_pairing?: string | null;
