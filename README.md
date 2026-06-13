@@ -4,6 +4,8 @@ A personal wine memory journal for logging bottles, ratings, tasting notes, phot
 
 ## Local Setup
 
+Use Node 20 or newer.
+
 Install dependencies:
 
 ```bash
@@ -25,6 +27,21 @@ npm run build
 npm run lint
 ```
 
+## Supabase Setup
+
+Use the Supabase Free plan for v1. A Supabase account is required, but do not
+enable paid add-ons or upgrade the project for v1.
+
+Copy `.env.example` to `.env.local` and set:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
+
+Create the `wine_entries` table with the SQL in [supabase/schema.sql](supabase/schema.sql).
+See [docs/supabase-setup.md](docs/supabase-setup.md) for brief setup notes.
+
 ## Current Goal
 
 Build a finished v1 in one month.
@@ -32,6 +49,7 @@ Build a finished v1 in one month.
 ## Project Docs
 
 - [v1 spec](docs/spec.md)
+- [Supabase setup](docs/supabase-setup.md)
 - [Future ideas](docs/future.md)
 - [UI/UX inspiration](docs/ui-ux-inspiration.md)
 
@@ -48,8 +66,6 @@ Build a finished v1 in one month.
 - TypeScript
 - Tailwind CSS
 - Vercel
-
-Planned after the initial mock app:
 - Supabase
 
 ## Development Rule
