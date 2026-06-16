@@ -20,6 +20,14 @@ create table if not exists public.wine_entries (
 
 alter table public.wine_entries enable row level security;
 
+drop policy if exists "Allow v1 anon wine entry inserts" on public.wine_entries;
+
+create policy "Allow v1 anon wine entry inserts"
+on public.wine_entries
+for insert
+to anon
+with check (true);
+
 create or replace function public.set_updated_at()
 returns trigger
 language plpgsql
