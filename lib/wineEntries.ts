@@ -188,21 +188,15 @@ export async function getWineEntry(
 export async function createWineEntry(
   entry: NewWineEntry,
   supabase: CellarSupabaseClient = createServerSupabaseClient()
-): Promise<WineEntry> {
+): Promise<void> {
   validateWineEntryFields(entry);
   const payload = toWineEntryInsert(entry);
 
-  const { data, error } = await supabase
-    .from(WINE_ENTRIES_TABLE)
-    .insert(payload)
-    .select("*")
-    .single();
+  const { error } = await supabase.from(WINE_ENTRIES_TABLE).insert(payload);
 
   if (error) {
     throw new Error(`Unable to create wine entry: ${error.message}`);
   }
-
-  return data;
 }
 
 export async function updateWineEntry(

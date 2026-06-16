@@ -22,6 +22,7 @@ Use the anon key only. Do not add a service role key to the browser app.
 Run the committed SQL in [supabase/schema.sql](../supabase/schema.sql) in the
 Supabase SQL editor.
 
-The setup SQL enables Row Level Security on `public.wine_entries`. Until
-policies are added in a later story, Supabase API keys should not be able to
-read or write rows through the public API.
+The setup SQL enables Row Level Security on `public.wine_entries` and temporarily
+allows anon inserts for Story 3. Read, update, and delete policies are
+intentionally deferred until their stories define the right access model. This
+is not the final production privacy model.

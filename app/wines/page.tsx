@@ -2,7 +2,15 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { WineCard } from "@/components/WineCard";
 import { wines } from "@/lib/wines";
 
-export default function WinesPage() {
+type WinesPageProps = {
+  searchParams?: {
+    created?: string;
+  };
+};
+
+export default function WinesPage({ searchParams }: WinesPageProps) {
+  const wasCreated = searchParams?.created === "1";
+
   return (
     <main className="paper-texture min-h-screen">
       <SiteHeader />
@@ -21,8 +29,17 @@ export default function WinesPage() {
           </div>
         </div>
 
+        {wasCreated ? (
+          <p
+            role="status"
+            className="mt-8 rounded-md border border-leaf/20 bg-leaf/10 px-4 py-3 text-sm font-medium leading-6 text-leaf"
+          >
+            Wine entry saved. Persisted browsing will replace this sample journal in a later story.
+          </p>
+        ) : null}
+
         {wines.length > 0 ? (
-          <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className={`${wasCreated ? "mt-5" : "mt-8"} grid gap-5 md:grid-cols-2 xl:grid-cols-3`}>
             {wines.map((wine) => (
               <WineCard key={wine.id} wine={wine} />
             ))}
